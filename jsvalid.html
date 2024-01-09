@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            var un=document.getElementById("t1").value;
+            var ps=document.getElementById("t2").value;
+            var mb=document.getElementById("t3").value;
+            var em=document.getElementById("t4").value;
+            var atposition=x.indexof("@");
+            var dotposition=x.lastindexof(".");
+            if(un.length<=5){
+                document.getElementById("p1").innerHTML="invalid username";
+                return false;
+            }
+            if(pd.length<=5){
+                document.getElementById("p1").innerHTML="invalid password";
+                return false;
+            }
+            if(mb.length!=10 || isNaN(mb)){
+                document.getElementById("p1").innerHTML="invalid mobile no.";
+                return false;
+            }
+            if(atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
+                document.getElementById("p1").innerHTML="invalid email id";
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="f1" method="post" action="login.php" onsubmit="return validate()">
+    <div class=" form username">
+        <label for="t1">username</label>
+        <input type="text" id="t1" name="t1" required>
+    </div>
+    <div class="form password">
+        <label for="t2">password</label>
+        <input type="password" id="t2" name="t2" required>
+    </div>
+    <div class="form mobile no.">
+        <label for="t3">mobile no.</label>
+        <input type="text" id="t3" name="t3" required>
+    </div>
+    <div>
+        <label for="t4">email id</label>
+        <input type="email" name="t4" id="t4" required>
+    </div>
+    <div>
+        <label for="gender">Enter the Gender</label>
+        <input type="radio" name="gender" value="male" id="t8">male
+        <input type="radio" name="gender" value="female" id="t8">female
+        <input type="radio" name="gender" value="other" id="t8">other
+    </div>
+    <div>
+        <label for="t7">Date of Birth</label>
+        <input type="date" name="t7" id="t7" required>
+    </div>
+    <div>
+        <label>Enter Your address</label>
+        <textarea></textarea>
+    </div>
+    <div>
+        <input type="submit" name="t5" id="t5">
+        <input type="reset" name="t6" id="t6">
+    </div>
+
+</form>
+<p id="p1"></p>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        #red {
+            background-color: red;
+            height: 500px;
+        }
+
+        #green {
+            background-color: aqua;
+            height: 100px;
+            ;
+        }
+    </style>
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <!-- type 1 container container fluid  give 100% width -->
+    <!-- type 2 class="container" mobile width pe keval 100% hoga warna bali pe margin dega equal -->
+    <!-- <div class="container-fuild" id="red"> 
+    <div class="row" id="green">
+        <div class="col-lg-4 col-xxl-6 bg-primary text-white">
+            col-6
+            <div class="row">
+                <div class="col-lg-4 bg-success"> div1</div>
+                <div class="col-lg-4 bg-white"></div>
+                <div class="col-lg-4 bg-secondary"></div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-xxl-4 bg-secondary text-white">col-4</div>
+        <div class="col-lg-2 bg-success text-white">col-2</div>
+    </div>
+   </div> -->
+    <!-- <div>
+    <h1 class="bg-primary text-danger">hello</h1>
+   </div> -->
+
+    <!-- bootstrap-flow : container>row>column>textor image etc. -->
+
+    <!-- breakpoints
+
+   x-small                        0px-575px                  col-*
+   small                          575px-767px                col-sm-*
+   medium                         768px-991px                col-md-*
+   large                        992px-1199px                 col-lg-*
+   extra large                    1200px-1399px              col-xl-*
+   extra extra large              1400px-infinite            col-xxl-*     -->
+
+    <!-- 
+   <div class="container-fluid">
+    <div class="row">
+        here div1 and div 2 has same class col so they divide in equal sixe -->
+    <!-- <div class="col bg-primary">div1</div>  
+         <div class="col-auto bg-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis ipsa asperiores, </div> 
+            col-auto content ke according khud apna sixe defined kar lega     
+        <div class="col-6 bg-secondary">div2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aliquid fugit aliquam culpa. Labore assumenda harum corporis ipsa veniam cupiditate saepe, aperiam delectus amet reprehenderit doloremque? Veniam ipsam voluptates eaque.</div> 
+        <div class="col bg-success">div3</div>
+    </div>
+   </div> -->
+
+
+    <!-- using flex properties -->
+
+    <!-- <div class="container-fluid"> 
+     <div class="row bg-warning" style="min-height: 400px;"> -->
+    <!-- sabhi column ki height auto,atically row ki height keequal ho jayegi
+    row me align-item-start/end/start use karke hum column ki position align kar sakte hai , but isme sabhi column ki position ek sath rhegi -->
+    <!-- 
+        <div class="col bg-primary align-self-start">div1</div> -->
+    <!-- we cn use align-self-start/end/center property to make a single column align separately -->
+    <!-- <div class="col bg-secondary">div2</div>
+        <div class="col bg-success align-self-end">div3</div>
+        <div class="col bg-danger">div4</div>
+        <div class="col bg-white align-self-start">div5</div>
+    </div>
+   </div> -->
+    <!-- <div class="container-fluid">
+    <div class="row justify-content-between bg-warning">  -->
+    <!-- horizontally align of column with row justify content-start/end/center/around/between/evenly -->
+    <!-- <div class="col-4 bg-danger">div1</div>
+        <div class="col-4 bg-primary">div2</div>
+       
+    </div>
+   </div>
+   -->
+
+    <!-- Reordering of divs -->
+
+    <!-- <div class="conainer-fluid">
+    <div class="row bg-warning">
+         <div class="col-4 order-lg-2 bg-primary text-white">div1</div> -->
+    <!-- class used is order-lg/mdetc-1/2/3etc -->
+    <!-- <div class="col-4 order-lg-3 bg-danger text-white">div2</div>
+        <div class="col-4 order-lg-1 bg-success text-white">div3</div>
+    </div>
+   </div> -->
+
+    <!-- offsetting columns -->
+    <!-- <div class="conainer-fluid">
+        <div class="row bg-warning">
+            <div class="col-4 bg-primary 
+            offset-1 text-white">div1</div> -->
+    <!-- offset give left space to the div  -->
+    <!-- <div class="col-4 bg-danger offset-2 text-white">div2</div>
+          
+        </div>
+    </div> -->
+
+    <!-- 
+    classes and components -->
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-12"> -->
+    <!-- <p class="bg-danger text-white text-center">Hello world</p> -->
+    <!--                 
+    <img src="WhatsApp Image 2023-11-28 at 9.07.30 PM.jpeg" class="img-fluid" alt=""> -->
+
+    <!-- <p class="bg-danger rounded">hello</p> -->
+    <!-- </div>
+        </div>
+    </div> -->
+
+
+    <!-- TABLE -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Handle</th>
+                                <th scope="col">Handle</th>
+                                <th scope="col">Handle</th>
+                                <th scope="col">Handle</th>
+                                <th scope="col">Handle</th>
+                                <th scope="col">Handle</th>
+                                <th scope="col">Handle</th>
+                                <th scope="col">Handle</th>
+                                <th scope="col">Handle</th>
+                                <th scope="col">Handle</th>
+                                <th scope="col">Handle</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

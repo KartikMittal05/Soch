@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #form{
+            background-color: white;
+            display: grid;
+            grid-template-columns:  1fr 1fr;
+            grid-template-rows:  1fr 1fr;
+            row-gap: 5px;
+            column-gap: 5px;
+            height: 500px;
+        }
+        .content{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .button{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="form"> 
+        <div class="content">
+
+        </div>
+        <div class="button">
+            <button class="a1" id="b1">
+                <a href="login.html" target="_self">Login</a> 
+            </button>
+        </div>
+        <div class="button" >
+            <button class="a1" id="b1">
+                <a href="reg.html" target="_self">sign up</a> 
+             </button>   
+        </div>
+         
+</body>
+</html>

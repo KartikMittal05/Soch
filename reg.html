@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border border-box;
+            font-family: 'Roboto', sans-serif;
+        
+
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+
+        }
+        .grid .box{
+            margin: 20px 100px 20px 100px;
+        }
+        .grid .box2 h1 h2{
+            margin-top: 200px;
+            color: blue;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url(sochh.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .box {
+            background-color: rgb(23, 22, 26);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: hsl(0, 0%, 100%);
+            width: 320px;
+            border-radius: 10px;
+           height: auto;
+        }
+
+        .box h1 {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .box .input {
+            width: 100%;
+            height: 10px;
+            margin: 50px 0;
+        }
+
+        .input input {
+
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 40px;
+            font-size: 16px;
+            color: #fff;
+            padding: 10px 25px 10px 10px;
+
+        }
+
+        .input input::placeholder {
+            color: #fff;
+        }
+
+        .box .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14.5px;
+            margin: -15px 10px 10px 30px;
+        }
+
+        .remember-forgot label input {
+            accent-color: #fff;
+
+        }
+
+        .remember-forgot a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+
+        .box .btn {
+            width: 100%;
+            height: 50px;
+            background: #fff;
+            border: none;
+            border-radius: 40px;
+
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+
+        }
+
+        .box .Register {
+            font-size: 15px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .Register p a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .Register p a:hover {
+            text-decoration: underline;
+        }
+
+        label {
+            display: inline-block;
+            width: 82%;
+        }
+
+        #forgotpassword {
+            padding-right: 0px;
+        }
+    </style>
+
+<script>
+    function validate(){
+        var un=document.getElementById("username").value;
+        var ps=document.getElementById("password").value;
+        var mb=document.getElementById("Contact").value;
+        var em=document.getElementById("email").value;
+        var atposition=x.indexof("@");
+        var dotposition=x.lastindexof(".");
+        if(un.length<=5){
+            document.getElementById("p1").innerHTML="invalid username";
+            return false;
+        }
+        if(pd.length<=5){
+            document.getElementById("p1").innerHTML="invalid password";
+            return false;
+        }
+        if(mb.length!=10 || isNaN(mb)){
+            document.getElementById("p1").innerHTML="invalid mobile no.";
+            return false;
+        }
+        if(atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
+            document.getElementById("p1").innerHTML="invalid email id";
+            return false;
+        }
+    }
+</script>
+
+</head>
+
+<body>
+    <div class="grid">
+        <div class="box2">
+            <!-- <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus voluptatum autem ab consequuntur at sapiente magnam veniam quibusdam repellendus impedit.</h1> -->
+        </div>
+        <div class="box">
+            <form action="reg.php" method="post" name="f1">
+                <h1>Sign Up</h1>
+                <div class="input">
+                    <label for="username">
+                        <input type="text" id="Username" placeholder="Username" name="t1" required>
+                    </label>
+                </div>
+                <div class="input">
+                    <label for="Name">
+                        <input type="text" id="Name" placeholder="Name" name="t2" required>
+                    </label>
+                </div>
+                <div class="input">
+                    <label for="Password">
+                        <input type="Password" id="Password" placeholder="Password" name="t3" required>
+                    </label>
+                </div>
+                <div class="input">
+                    <label for="mobile_no">
+                        <input type="email" id="email" placeholder="Email ID" name="t4" required>
+                    </label>
+                </div>
+               
+                <div class="input">
+                    <label for="Contact">
+                        <input type="text" id="Contact" placeholder="Contact" name="t5" required>
+                    </label>
+                </div>
+                <div class="input">
+                    <label for="DOB">
+                        <input type="date" id="DOB" placeholder="Date of Birth" name="t6" required>
+                    </label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="Register">
+                    <p>Already have account? <a href="login.html">Login</a></p>
+               
+                </div>
+        </div>
+
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+<style>
+  * {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  body {
+    
+    background-color: #9EC8B9;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .menu {
+    background: #092635;
+    text-align: center;
+
+  }
+
+  .menu ul {
+    display: inline-flex;
+    list-style: none;
+    color: #9EC8B9;
+  }
+
+  .menu ul li {
+    width: 200px;
+    margin: 18px;
+    padding: 1px;
+  }
+
+  .menu ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+  }
+
+  .menu ul li a:hover {
+    background-color: rgb(54, 50, 104);
+    border-radius: 3px;
+
+  }
+
+  .submenu {
+    display: none;
+  }
+
+  .menu ul li:hover .submenu {
+    display: block;
+    position: absolute;
+    background-color: #5C8374;
+    margin-top: 19px;
+    margin-left: -15px;
+  }
+
+  .menu ul li:hover .submenu ul {
+    display: block;
+    margin: 10px;
+  }
+
+  .menu ul li:hover .submenu ul li {
+    width: 120px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0px;
+    text-align: left;
+  }
+
+  .menu ul li:hover .submenu ul li:last-child {
+    border-bottom: none;
+  }
+
+
+
+
+  .side_bar {
+    position: relative;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 84vh;
+    background: #1B4242;
+    padding: 12px;
+    box-shadow: -3px -3px 7px #5d7a81,
+      3px 3px 5px #ceced1,
+      inset -3px -3px 7px rgb(255, 255, 255),
+      inset 3px 3px 5px #9797a8;
+    transition: all 0.3s ease;
+  }
+
+  .side_bar .title {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .side_bar .title .logo {
+    font-size: 27px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .side_bar ul {
+    margin-top: 35px;
+    list-style: none;
+  }
+
+  .side_bar ul a {
+    color: #c0c0c0;
+    text-decoration: none;
+    display: block;
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 25px;
+    border-radius: 6px;
+    box-shadow: -3px -3px 7px #ffffff,
+      3px 3px 5px #ceced1;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .side_bar ul i {
+    margin-right: 10px;
+  }
+
+  .media_icons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .media_icons a {
+    position: relative;
+    margin: 0 4px;
+    font-size: 17px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    box-shadow: -3px -3px 7px #ffffff,
+      3px 3px 5px #ceced1;
+    transition: all 0.3s ease;
+  }
+
+  .side_bar ul a:hover:before,
+  .media_icons a:hover:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset -3px -3px 7px #ffffff,
+      inset 3px 3px 5px #ceced1;
+  }
+
+  .side_bar ul a:hover:before {
+    border-radius: 6px;
+  }
+
+  .media_icons a:hover:before {
+    border-radius: 50%;
+  }
+
+  .side_bar ul a:hover {
+    color: #3498db;
+  }
+
+  .media_icons a:nth-child(1) {
+    color: #4267b2;
+  }
+
+  .media_icons a:nth-child(2) {
+    color: #1da1f2;
+  }
+
+  .media_icons a:nth-child(3) {
+    color: #e1306c;
+  }
+
+  .media_icons a:nth-child(4) {
+    color: #ff0000;
+  }
+
+  label {
+    font-size: 17px;
+    color: #50557a;
+    box-shadow: -3px -3px 7px #ffffff,
+      3px 3px 5px #ceced1;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 37px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  label:hover {
+    box-shadow: inset -3px -3px 7px #ffffff,
+      inset 3px 3px 5px #ceced1;
+    color: #3498db;
+  }
+
+  #check {
+    display: none;
+  }
+
+  .bars {
+    position: absolute;
+    left: 7px;
+    top: 37px;
+  }
+
+  #check:checked~.side_bar {
+    left: 0;
+  }
+
+  .heading {
+    width: 100%;
+    font-size: x-large;
+  }
+
+  .question {
+    border: 1px solid red;
+    height: 100px;
+    width: 100px;
+  }
+ 
+</style>
+
+<body>
+  <div class="heading">
+    <center>
+      <h4>SOCH>>A Communicatiom Platform for exchanging opinions</h4>
+    </center>
+  </div>
+  <div class="menu bar">
+    <ul>
+      <li class="active"><a href="try2.html">Home</a></li>
+      <li><a href="aboutus.html">About us</a></li>
+      <li><a href="#">Mentors</a>
+        <div class="submenu">
+          <ul>
+            <li><a href="">Justin Pop</a></li>
+            <li><a href="">Albert Wade</a></li>
+            <li><a href="">Wingo James</a></li>
+            <li><a href="">Jenny</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
+  </div>
+  <div>
+    <input type="checkbox" id="check">
+    <label class="button bars" for="check"><i class="fas fa-bars"></i></label>
+    <div class="side_bar">
+      <div class="title">
+        <div class="logo">Check Out!</div>
+        <label class=" button cancel" for="check"><i class="fas fa-times"></i></label>
+      </div>
+      <ul>
+        <li><a href="#">Motivational</a></li>
+        <li><a href="#">Daily based News</a></li>
+        <li><a href="#">New ideas</a></li>
+        <li><a href="#">Weekly Debates</a></li>
+        <li><a href="#">This month</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </div>
+  </div>
+
+  
+</body>
+
+</html>
