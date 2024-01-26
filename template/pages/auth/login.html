@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border border-box;
+            font-family: 'Roboto', sans-serif;
+            
+            
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+
+
+        }
+        .grid .box{
+            margin: 20px 100px 20px 100px;
+        }
+        .box2{
+            margin-top: 200px;
+            color: blue;
+            justify-content: center;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url(sochh.jpg) no-repeat;
+            background-size: cover;
+  
+            opacity: (.5);
+            background-position: center;
+
+        }
+        .box{
+            background-color: rgb(23, 22, 26);
+            color: #fff;
+            width: 300px;
+            border-radius: 10px;
+            padding: 20px 40px ;
+            box-shadow: #333;
+        }
+        .box h1{
+            text-align: center;
+            font-size: 40px;
+        }
+        .box .input{
+            width: 100%;
+            height: 20px;
+            margin: 68px 0 ;
+        }
+        .input input{
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(255,255,255,.2);
+            border-radius: 40px;
+            font-size: 16px;
+            color: #fff;
+            padding: 22px 40px 20px 20px;
+
+        } 
+        .input input::placeholder{
+            color: #fff;
+        }
+        .box .remember-forgot{
+            display:flex;
+            justify-content:space-between;
+            font-size: 14.5px;
+            margin: -15px 10px 10px 30px;
+        }
+        .remember-forgot label input{
+            accent-color: #fff;
+       
+        }
+        
+        .remember-forgot a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .remember-forgot a:hover{
+            text-decoration: underline;
+        }
+        .box .btn {
+            width: 100%;
+            height: 50px;
+            background: #fff;
+            border: none;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0,.1);
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+
+        }
+        .box .Register{
+            font-size: 15px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .Register p a{
+            color: #fff;
+            text-decoration:none ;
+            font-weight: 600;
+        }
+        .Register p a:hover{
+            text-decoration: underline;
+        }
+  label{
+    display: inline-block;
+    width: 82%;
+  }
+  #forgotpassword{
+    padding-right: 0px;
+  }
+ button{
+    text-decoration: none;
+ }
+
+    </style>
+
+<script>
+    function validate(){
+        var un=document.getElementById("t1").value;
+        var ps=document.getElementById("t2").value;
+        var atposition=x.indexof("@");
+        var dotposition=x.lastindexof(".");
+        if(un.length<=5){
+            document.getElementById("t1").innerHTML="invalid username";
+            return false;
+        }
+        if(pd.length<=5){
+            document.getElementById("t2").innerHTML="invalid password";
+            return false;
+        }
+    }
+</script>
+
+</head>
+<body>
+    <div class="grid">
+        <div claas="box2" style="display: flex; color: #fff; justify-content: center; align-items: center;">
+        <center>
+            <!-- <h1 >SOCH >>A Communication Platform for Exchanging Opinion</h1>
+            <h2>Let's Think Togother</h2> -->
+        </center>
+        </div>
+            <div class="box">
+
+            <form action="../php/login.php" method="post" name="f1">
+                <h1>Login</h1>
+                <div class="input">
+                    <label for="username">
+                        <input type="text" id="username" placeholder="Username" name="t1" required>
+                    </label>
+                </div>
+                <div class="input">
+                    <label for="pass">
+                    <input type="password" id="pass" placeholder="Password" name="t2" required>
+                </label>
+                </div>
+                <div class="remember-forgot">
+                    <label for=""><input type="checkbox">Remember Me </label>
+                    <a href="#" id="forgotpassword">Forgot password</a>
+                </div>
+                <button type="submit" class="btn " ><a href="../main/main.html">Login</a></button>
+                <div class="Register">
+                    <p>Don't have account? <a href="reg.html">Register</a></p>
+               
+                </div>
+            </div>
+        </div>
+    </div>
+          
+</body>
+</html>
